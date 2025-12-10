@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MARCO | Portfolio</title>
+
+    <style>
+        /* -------------------- GLOBAL STYLES -------------------- */
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #0c0c0c;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+            font-weight: 700;
+        }
+
+        a { 
+            color: #ff3b3b;
+            text-decoration: none;
+        }
+
+        /* -------------------- HEADER -------------------- */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #000000, #001c66);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            letter-spacing: 4px;
+            color: #ff3b3b;
+            animation: glow 2s infinite alternate ease-in-out;
+        }
+
+        header p {
+            max-width: 700px;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px red; }
+            to { text-shadow: 0 0 25px blue; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* -------------------- AUTO SCROLLING IMAGES -------------------- */
+        .image-slider-container {
+            width: 100%;
+            overflow: hidden;
+            background: #000;
+            padding: 40px 0;
+            margin: 60px 0;
+        }
+
+        .image-slider {
+            display: flex;
+            width: max-content;
+            animation: scroll 20s linear infinite;
+        }
+
+        .image-slider img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            margin: 0 20px;
+            border-radius: 10px;
+            border: 2px solid #ff3b3b;
+            transition: transform .3s;
+        }
+
+        .image-slider img:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes scroll {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+        /* -------------------- ABOUT SECTION -------------------- */
+        .about {
+            padding: 60px 10%;
+            background: #0e0e0e;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #4287f5;
+        }
+
+        .about p {
+            line-height: 1.7;
+            font-size: 1.1rem;
+            opacity: 0.85;
+        }
+
+        /* -------------------- CONTACT -------------------- */
+        footer {
+            background: #000000;
+            padding: 40px 10%;
+            text-align: center;
+            margin-top: 60px;
+            border-top: 2px solid #ff3b3b;
+        }
+
+        footer h2 {
+            color: #ff3b3b;
+            margin-bottom: 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- -------------------- HEADER -------------------- -->
+    <header>
+        <h1>MARCO</h1>
+        <p>
+            <!-- EDIT THIS TEXT LATER -->
+            Welcome to my personal portfolio. I am a passionate developer/designer 
+            dedicated to creating beautiful, functional, and modern digital experiences.
+        </p>
+    </header>
+
+    <!-- -------------------- IMAGE SLIDER -------------------- -->
+    <div class="image-slider-container">
+        <div class="image-slider">
+
+            <!-- ADD OR REMOVE IMAGES FROM YOUR /images/ FOLDER -->
+            <img src="images/img1.jpg" alt="Project 1">
+            <img src="images/img2.jpg" alt="Project 2">
+            <img src="images/img3.jpg" alt="Project 3">
+            <img src="images/img4.jpg" alt="Project 4">
+            <img src="images/img5.jpg" alt="Project 5">
+
+        </div>
+    </div>
+
+    <!-- -------------------- ABOUT SECTION -------------------- -->
+    <section class="about">
+        <h2>About Me</h2>
+        <p>
+            <!-- EDIT THIS LATER -->
+            Hi, I'm Marco — a designer and developer with a passion for creating visually
+            stunning and user-friendly digital products. I specialize in front-end development,
+            UI/UX design, and interactive web experiences.  
+            I love bringing ideas to life through clean design, smooth animations,
+            and modern web technologies.
+        </p>
+    </section>
+
+    <!-- -------------------- CONTACT SECTION -------------------- -->
+    <footer>
+        <h2>Contact Me</h2>
+
+        <!-- EDIT THESE DETAILS FREELY -->
+        <p>Email: your-email@example.com</p>
+        <p>Phone: +123 456 789</p>
+        <p>Location: Your City, Your Country</p>
+        <p>
+            GitHub: <a href="#">your-github-link</a>
+        </p>
+
+        <p style="margin-top:20px; opacity:0.5;">
+            © 2025 MARCO | All Rights Reserved
+        </p>
+    </footer>
+
+</body>
+</html>
